@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'account',
     'rest_framework',
-        'corsheaders',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -85,13 +85,14 @@ DATABASES = {
     }
 }
 
-
+# JWT configure
 REST_FRAMEWORK = {
     
     'DEFAULT_AUTHENTICATION_CLASSES': (
         
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+        'rest_framework_simplejwt.authentication.JWTAuthentication',)
+    # ),  
+    # 'DEFAULT_RENDERER_CLASSES':('rest_framework.renderers.JSONRenderer',)
     
 }
 
